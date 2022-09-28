@@ -1,0 +1,63 @@
+<!-- <%- include('partials/header') -%>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <ul class="row list-unstyled">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li class="col-6 justify-content-between mt-5">
+            <a href="/post/<%= posts[i]._id%>">
+              <img class="img-fluid" src="<%= posts[i].image%>">
+              <h1><%= posts[i].title %></h1>
+            </a>
+          </li>
+        <% } %>
+        </ul>
+    </div>
+  </div>  
+<%- include('partials/footer') -%> -->
+
+<%- include('partials/logged-in-header') -%>
+
+<div class="chart-container">
+  <canvas id="myChart"></canvas>
+</div>
+
+<div class="container feed-container">
+    
+      <% if(posts.length > 0) { %>
+        <h1>Food Items for <%= posts[0].restaurant %></h1>
+      <% } %>
+      
+      
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <% for(var i = 0; i < posts.length; i++) { %>
+            <div class="col">
+                <div class="card text-center h-100">
+                    <img src="<%= posts[i].image%>" class="card-img-top" alt="...">
+                    <div class="card-body" data-id='<%=posts[i]._id%>'>
+                        <h5 class="card-title"><%= posts[i].title%></h5>
+                        <p class="card-text">Calories: <%= posts[i].calories%> g</p>
+                        <p class="card-text">Protein: <%= posts[i].protein%> g</p>
+                        <p class="card-text">Carbs: <%= posts[i].totalcarbohydrates%> g</p>
+                        <p class="card-text">Total Fat: <%= posts[i].totalfat%> g</p>
+                        <a href="/post/<%= posts[i].id%>" class="btn btn-primary">View Details</a>
+                        <button class="btn btn-primary" id="item-selection">Add to Meal</button>
+                        <button class="btn btn-primary remove item-selection-remove" id='<%=posts[i]._id%>'>Remove from Meal</button>
+
+                        <%if(posts.user === user.id){%>
+                            <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3">
+
+                            <button class="btn btn-primary fa fa-trash" type="submit"></button>
+                            </form>
+                        <%}%>
+                    </div>
+                    <div class="card-footer">
+                        <span class="badge rounded-pill bg-primary"><%= posts[i].restaurant%></span>
+                        <span class="badge rounded-pill bg-secondary"><%= posts[i].dish%></span>
+                    </div>
+                </div>
+            </div>
+        <%}%>
+    </div>
+</div>
+
+<%- include('partials/footer') -%>

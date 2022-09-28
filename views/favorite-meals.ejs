@@ -1,0 +1,36 @@
+<%- include('partials/logged-in-header') -%>
+
+<div class="container card-container bookmark-cards">
+  <h1>My Bookmarked Recipes</h1>
+  <% console.log(posts[0]) %> 
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% for(var i=0; i<posts.length; i++) {%>
+      <%if(posts[i].bookmarks.includes(user.id)) {%>
+    <div class="col">
+      <div class="card h-100">
+        <img src="<%= posts[i].image%>" class="card-img-top" alt="...">
+        <div class="card-body" data-id='<%=posts[i]._id%>'>
+          <h5 class="card-title"><%= posts[i].title%></h5>
+          <p class="card-text">Calories: <%= posts[i].calories%> g</p>
+          <p class="card-text">Protein: <%= posts[i].protein%> g</p>
+          <p class="card-text">Carbs: <%= posts[i].totalcarbohydrates%> g</p>
+          <p class="card-text">Total Fat: <%= posts[i].totalfat%> g</p>
+          <a href="/post/<%= posts[i]._id%>" class="btn btn-primary">View Details</a>
+          <button class="btn btn-primary" id="item-selection">Add to Meal</button>
+          <button class="btn btn-primary remove item-selection-remove" id='<%=posts[i]._id%>'>Remove from Meal</button>
+          
+        </div>
+        <div class="card-footer">
+          <span class="badge rounded-pill bg-primary"><%= posts[i].restaurant%></span>
+          <span class="badge rounded-pill bg-secondary"><%= posts[i].dish%></span>
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <% } %>
+  </div>
+  
+</div>
+
+
+<%- include('partials/footer') -%>
