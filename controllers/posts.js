@@ -23,7 +23,9 @@ module.exports = {
   },
   getBookmarks: async (req, res) => {
     try {
-      const posts = await Post.find({ user: req.user.id });
+      
+      const posts = await Post.find({"bookmarks":req.user.id});
+      console.log(posts)
       res.render("favorite-meals.ejs", { posts: posts, user: req.user });
     } catch (err) {
       console.log(err);
