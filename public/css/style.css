@@ -122,4 +122,10 @@ img#restcard.card-img-top:hover {
     align-items: center;
     margin-top: 1rem;
   }
+
+  .landing-page {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 }
