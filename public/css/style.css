@@ -1,85 +1,125 @@
 button.remove {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 button.remove-visible {
-    visibility: visible;
+  visibility: visible;
 }
 
 .chart-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  height: 15vh;
+  width: 15vw;
+}
+
+.btn-liked {
+  color: #f03566;
+}
+
+.btn-bookmarked {
+  background: #ffff;
+}
+
+.nutritional.container {
+  width: 50%;
+  border-radius: 10px;
+  background-color: rgb(246, 186, 78, 0.2);
+  box-shadow: 10px 8px 5px lightgrey;
+  /* z-index: 1;
+    /* position:sticky;
+    top: 18%; */
+  padding: 2%;
+  margin-top: 10rem;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+
+.restaurant-cards {
+  margin-top: 20rem;
+}
+
+.bookmark-cards {
+  margin-top: 2rem;
+}
+
+.feed-container {
+  margin-top: 0rem;
+}
+
+.card-container {
+  margin-top: 10rem;
+}
+
+img#restcard.card-img-top:hover {
+  transform: scale(0.9);
+}
+
+.indexbutton {
+  color: black;
+  outline-color: black;
+  border-color: black;
+}
+
+.indexbutton:hover {
+  background-color: #5516bb;
+}
+
+.btn-primary {
+  background-color: #5516bb;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #8143e5;
+}
+
+.signup-container {
+  margin-top: 10rem;
+}
+
+@media screen and (max-width: 480px) {
+  #card {
+    display: flex;
+    justify-content: center;
+  }
+
+  #h1-restaurants {
+    text-align: center;
+  }
+
+  .chart-container {
     position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2%;
-    height: 15vh;
-    width: 15vw;
-}
-
-  .btn-liked{
-    color: #f03566;
+    height: 10vh;
+    width: 70vw;
   }
 
-.btn-bookmarked{
-    background: #ffff;
-}
-
-.nutritional.container{
-    width: 50%;
+  .nutritional.container {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
     border-radius: 10px;
-    background-color: rgb(246,186,78, 0.2);
+    background-color: rgb(246, 186, 78, 0.2);
     box-shadow: 10px 8px 5px lightgrey;
     /* z-index: 1;
-    /* position:sticky;
-    top: 18%; */ 
-    padding: 2%;
-    margin-top: 10rem; 
-}
-
-a{
-    text-decoration: none;
-    text-align: center;
-    color: black;
-}
-
-.restaurant-cards
-{
-    margin-top: 20rem;
-}
-
-.bookmark-cards
-{
-    margin-top: 2rem;
-}
-
-.feed-container
-{
-    margin-top: 0rem;
-}
-
-.card-container{
+      /* position:sticky;
+      top: 18%; */
+    padding: 1%;
     margin-top: 10rem;
-}
+  }
 
-img#restcard.card-img-top:hover{
-    transform: scale(0.9)
+  #post-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
 }
-
-.indexbutton{
-    color: black;
-    outline-color: black;
-    border-color: black;
-}
-
-.indexbutton:hover{
-    background-color: #5516bb;
-}
-
-.btn-primary{
-    background-color: #5516bb;
-    border: none;
-}
-
-.btn-primary:hover{
-    background-color: #8143e5;
-}
-

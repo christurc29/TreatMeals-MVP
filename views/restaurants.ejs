@@ -1,25 +1,27 @@
 <%- include('partials/logged-in-header-min') -%>
 
 <div class="container card-container restaurant-cards">
-    <h1>Restaurants</h1>
-    <div class="row row-cols-1 row-cols-md-3 g-3">
-        <% for(var i = 0; i < restaurants.length; i++) { %>
-            <a href="/feed/<%= restaurants[i].title%>">
-            <div class="col">
-                <div class="card h-100 w-50">
-                    <img src="<%= restaurants[i].image%>" class="card-img-top" alt="..." id="restcard">
-                    <div class="card-body">
-                        <h5 class="card-title"><%= restaurants[i].title%></h5>
-                        <p class="card-text"><%= restaurants[i].cuisine%></p>
-                    
-                    </div>
-                  
-                </div>
-            </div>
-            </a>
-        <%}%>
-    </div>
+  <h1 id="h1-restaurants">Restaurants</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-3">
+    <% for(var i = 0; i < restaurants.length; i++) { %>
+    <a href="/feed/<%= restaurants[i].title%>">
+      <div id="card" class="col">
+        <div class="card h-100 w-75">
+          <img
+            src="<%= restaurants[i].image%>"
+            class="card-img-top"
+            alt="..."
+            id="restcard"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%= restaurants[i].title%></h5>
+            <p class="card-text"><%= restaurants[i].cuisine%></p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <%}%>
+  </div>
 </div>
-
 
 <%- include('partials/footer') -%>
