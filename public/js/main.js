@@ -36,9 +36,7 @@ async function addToMealPlan() {
 
     let restaurant = data.restaurant;
 
-    console.log(calories);
     let totalCals = calories.reduce((a, b) => a + b, 0);
-    console.log(totalCals);
     let totalProtein = protein.reduce((a, b) => a + b, 0);
     let totalCarbs = carbs.reduce((a, b) => a + b, 0);
     let totalFat = fats.reduce((a, b) => a + b, 0);
@@ -203,12 +201,12 @@ async function removeFromMealPlan() {
 
     if (idxCal == -1) {
       calories.splice(0, 0);
-      idxCal = calories.findIndex((p) => p == data.calories);
-      if (idxCal == -1) {
+      // idxCal = calories.findIndex((p) => p == data.calories);
+      // if (idxCal == -1) {
         document
           .getElementById(`${foodItemId}`)
           .classList.remove("remove-visible");
-      }
+      // }
     } else {
       calories.splice(idxCal, 1);
       idxCal = calories.findIndex((p) => p == data.calories);
@@ -220,21 +218,21 @@ async function removeFromMealPlan() {
     }
 
     if (idxProtein == -1) {
-      protein.splice(0, 0);
+        protein.splice(0, 0);
     } else {
-      protein.splice(idxCal, 1);
+      protein.splice(idxProtein, 1);
     }
 
     if (idxCarbs == -1) {
       carbs.splice(0, 0);
     } else {
-      carbs.splice(idxCal, 1);
+      carbs.splice(idxCarbs, 1);
     }
 
     if (idxFats == -1) {
       fats.splice(0, 0);
     } else {
-      fats.splice(idxCal, 1);
+      fats.splice(idxFats, 1);
     }
 
     if (idxMeals == -1) {
@@ -243,8 +241,8 @@ async function removeFromMealPlan() {
       mealItemsArray.splice(idxMeals, 1);
     }
 
+
     let totalCals = calories.reduce((a, b) => a + b, 0);
-    console.log(totalCals);
     let totalProtein = protein.reduce((a, b) => a + b, 0);
     let totalCarbs = carbs.reduce((a, b) => a + b, 0);
     let totalFat = fats.reduce((a, b) => a + b, 0);
