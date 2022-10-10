@@ -16,8 +16,8 @@
           <p class="card-text">Carbs: <%= posts[i].totalcarbohydrates%> g</p>
           <p class="card-text">Total Fat: <%= posts[i].totalfat%> g</p>
           <a href="/post/<%= posts[i]._id%>" class="btn btn-primary">View Details</a>
-          <button class="btn btn-primary" id="item-selection">Add to Meal</button>
-          <button class="btn btn-primary remove item-selection-remove" id='<%=posts[i]._id%>'>Remove from Meal</button>
+          <button class="btn btn-primary" id="item-selection" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Add to Meal</button>
+          <button class="btn btn-primary remove item-selection-remove" id='<%=posts[i]._id%>' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Remove from Meal</button>
           
         </div>
         <div class="card-footer">
@@ -32,5 +32,31 @@
   
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Nutrition Facts</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Calories:</strong> <span id="calories">0</span></p>
+        <p><strong>Protein:</strong> <span id="protein">0</span><span>g</span></p>
+        <p><strong>Carbs:</strong> <span id="carbs">0</span><span>g</span></p>
+        <p><strong>Fat:</strong> <span id="fat">0</span><span>g</span></p>
+        <p><strong>Meal Items:</strong> <span id="meal-items"></span></p>
+        
+        <canvas id="myChart" class="chart-container"></canvas>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%- include('partials/footer') -%>

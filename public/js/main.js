@@ -65,7 +65,9 @@ async function loadCals(
 
   const data = {};
 
-  const config = {};
+  const config = {
+    maintainAspectRatio: true,
+  };
 
   try {
     await fetch(`/feed/${restaurant}`);
@@ -74,8 +76,11 @@ async function loadCals(
     document.getElementById("protein").innerText = protein;
     document.getElementById("carbs").innerText = carbs;
     document.getElementById("fat").innerText = fat;
+
     mealItems = mealItemsArray.join(", ");
-    document.getElementById("meal-items").innerText = mealItems;
+    // document.getElementById("meal-items").innerText = mealItems;
+    // document.getElementById("meal-items").innerText = Object.values(counts)
+
 
     const data = {
       labels: labels,
@@ -96,6 +101,7 @@ async function loadCals(
     const config = {
       type: "doughnut",
       data: data,
+      maintainAspectRatio: true,      
       options: {
         plugins: {
           labels: {
@@ -180,10 +186,31 @@ async function loadCals(
 
     myChart.value = new Chart(ctx, config);
 
+     //List Meal Items
+     const counts = {}
+     mealItemsArray.forEach((val, idx) => {
+       counts[val] = (counts[val] || 0) + 1
+     })
+   
+      var keys = Object.keys(counts)
+
+      function obsKeysToString(o, k, sep) {
+        return k.map(function(key) {
+          return o[key] + " " + key;          
+        }).filter(function(v) {
+          return v;
+        }).join(sep);
+      }
+
+       console.log(obsKeysToString(counts, keys, ", "))
+       document.getElementById("meal-items").innerText = (obsKeysToString(counts, keys, ", "))
+
+
     //location.reload()
   } catch (err) {
     console.log(err);
   }
+
 }
 
 async function removeFromMealPlan() {
@@ -254,3 +281,5 @@ async function removeFromMealPlan() {
     console.log(err);
   }
 }
+
+
