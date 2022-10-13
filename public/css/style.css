@@ -39,7 +39,7 @@ a {
 }
 
 .feed-container {
-  margin-top: 4rem;
+  margin-top: 7rem;
 }
 
 .card-container {
@@ -93,7 +93,6 @@ img#restcard.card-img-top:hover {
   }
 
 
-
   #post-icons {
     display: flex;
     align-items: center;
@@ -117,90 +116,6 @@ img#restcard.card-img-top:hover {
   cursor: pointer;
 }
 
-/* Popup */
-
-/* @media (min-width: 500px) {
-  .popup {
-    width: 100vw;
-    border-radius: 6px;
-    position: fixed;
-    bottom: -80%;
-    transform: translate(-50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s bottom 0.4s;
-    transition: all ease-in 1000ms;
-  }
-}
-
-@media (max-width: 490px) {
-  .popup {
-    width: 100vw;
-    border-radius: 6px;
-    position: fixed;
-    bottom: -50%;
-    transform: translate(-50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s bottom 04.s;
-    transition: all ease-in 1000ms;
-  }
-}
-
-
-.open-popup {
-  visibility: visible;
-  transform: translate(0, -80%);
-}
-
-.popup button {
-  width: 100%;
-  margin-top: 50px;
-  padding: 10px 0;
-  background: #5516bb;
-  color: white;
-  border: 0;
-  outline: none;
-  font-size: 18px;
-  border-radius: 4px;
-  cursor: pointer;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-} */
-
-/* Nutrition Facts Container */
-
-
-/* @media (min-width: 490px){
-  .nutritional.container {
-    width: 60vw;
-    border-radius: 10px;
-    background-color: rgb(199, 199, 246);
-    box-shadow: 10px 8px 5px lightgrey;
-     z-index: 1;
-     position:sticky;
-    top: 18%; 
-    padding: 2%;
-    margin-bottom: 1.8rem;
-  }
-}
-
-@media (max-width: 480px){
-  .nutritional.container {
-      width: 80vw;
-      border-radius: 10px;
-      background-color: rgb(199, 199, 246);
-      box-shadow: 10px 8px 5px lightgrey;
-      z-index: 1;
-      position:sticky;
-      top: 18%;
-      padding: 2%;
-      margin-top: 8rem;
-  }
-} */
 
 .modal-center {
   width: 80vw;
