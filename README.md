@@ -3,6 +3,8 @@
 
 ### Eat your favorite foods from various fast food and restaurant locations while sticking to your macros!
 
+<img src="./public/imgs/TreatMeals.gif">
+
 <br>
 
 ## Tech Used: ![JAVASCRIPT BADGE](https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript)![HTML BADGE](https://img.shields.io/static/v1?label=|&message=HTML&color=285f65&style=plastic&logo=html5)![CSS BADGE](https://img.shields.io/static/v1?label=|&message=CSS&color=3c7f5d&style=plastic&logo=css3)![MONGODB BADGE](https://img.shields.io/static/v1?label=|&message=Mongo%20DB&color=3c7f5d&style=plastic&logo=mongodb)![NODEJS BADGE](https://img.shields.io/static/v1?label=|&message=Node%20JS&color=3c7f5d&style=plastic&logo=nodedotjs)![CHARTJS BADGE](https://img.shields.io/static/v1?label=|&message=Chart%20JS&color=3c7f5d&style=plastic&logo=chartdotjs)![PASSPORT BADGE](https://img.shields.io/static/v1?label=|&message=Passport%20JS&color=3c7f5d&style=plastic&logo=passport)![BOOSTRAP BADGE](https://img.shields.io/static/v1?label=|&message=Boostrap&color=3c7f5d&style=plastic&logo=bootstrap), EJS, Express
