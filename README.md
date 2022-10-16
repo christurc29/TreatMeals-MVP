@@ -3,7 +3,7 @@
 
 ### Eat your favorite foods from various fast food and restaurant locations while sticking to your macros!
 
-<img src="./public/imgs/TreatMeals.gif">
+
 
 <br>
 
